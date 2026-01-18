@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: bsc-usdt-sender
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
+      - key: BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_USER_ID
+        sync: false
+      - key: PRIVATE_KEY
+        sync: false
+      - key: BSCSCAN_API_KEY
+        sync: false
